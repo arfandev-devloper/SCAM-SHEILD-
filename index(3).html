@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#07090d" />
+  <title>ScamShield — Detect. Prevent. Stay Safe.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#" data-page="home"><span class="shield-logo">S</span><span><b>Scam<span>Shield</span></b><small>Detect. Prevent. Stay Safe.</small></span></a>
+    <nav class="side-nav">
+      <button class="nav-item active" data-page="home"><span>⌂</span>Home</button>
+      <button class="nav-item" data-page="analyze"><span>⌕</span>Analyze</button>
+      <button class="nav-item" data-page="history"><span>◴</span>History</button>
+      <button class="nav-item" data-page="tips"><span>♢</span>Safety Tips</button>
+      <button class="nav-item" data-page="tools"><span>⬡</span>Tools</button>
+      <button class="nav-item" data-page="reports"><span>▤</span>Reports</button>
+    </nav>
+    <div class="safe-card"><div class="mini-shield">✓</div><strong>Together for a Safer Digital World</strong><p>Your demo data stays in this browser.</p></div>
+    <div class="version">ScamShield v1.0.0</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <nav class="top-links"><button data-page="home">Home</button><button data-page="features">Features</button><button data-page="how">How It Works</button><button data-page="about">About</button></nav>
+      <div class="top-actions"><button class="icon-btn" id="themeBtn">☾</button><button class="profile-btn" id="loginBtn"><span class="avatar">A</span><span id="profileName">Arfan</span>⌄</button></div>
+    </header>
+
+    <section id="page-home" class="page active">
+      <section class="hero">
+        <div class="hero-copy"><div class="eyebrow">AI-POWERED CYBER AWARENESS</div><h1>Scan Before<br/>You <span>Trust.</span></h1><p>Detect scams, phishing attempts, suspicious messages, fake rewards and risky links with explainable analysis.</p><div class="hero-actions"><button class="primary" data-page="analyze">Start Analyzing →</button><button class="ghost" data-page="how">Learn More</button></div></div>
+        <div class="hero-art"><div class="hood"><div class="hood-face">BE AWARE<br/>STAY SAFE</div></div><div class="globe"></div><div class="signal-lines"></div></div>
+      </section>
+
+      <section class="stats-grid">
+        <article><div class="stat-icon danger">☷</div><div><strong id="statAnalyzed">12,548</strong><span>Messages Analyzed</span></div></article>
+        <article><div class="stat-icon warning">△</div><div><strong id="statScams">3,921</strong><span>Scams Detected</span></div></article>
+        <article><div class="stat-icon safe">✓</div><div><strong>99.2%</strong><span>Demo Accuracy</span></div></article>
+        <article><div class="stat-icon info">♙</div><div><strong>8,730</strong><span>Users Protected</span></div></article>
+      </section>
+
+      <section class="dashboard-grid">
+        <div class="panel analyzer-panel">
+          <div class="panel-heading"><div><span class="panel-icon">▤</span><div><h2>Analyze a Message</h2><p>Paste suspicious content below.</p></div></div><div class="tabs"><button class="tab active" data-type="text">Text</button><button class="tab" data-type="email">Email</button><button class="tab" data-type="link">Link</button><button class="tab" data-type="image">Image</button></div></div>
+          <textarea id="messageInput" maxlength="2000" placeholder="Paste your suspicious message here..."></textarea><div class="textarea-footer"><span id="charCount">0/2000</span></div><button class="primary full" id="analyzeBtn">⌕ Analyze Now</button>
+        </div>
+        <div class="panel result-panel">
+          <div class="panel-heading simple"><div><span class="panel-icon">◇</span><h2>Analysis Result</h2></div><button class="ghost small" id="newScanBtn">↻ New Scan</button></div>
+          <div class="risk-summary"><div class="gauge" id="gauge"><div><strong id="riskScore">0%</strong><span>Risk Score</span></div></div><div><h3 id="riskLabel">Ready to Scan</h3><p id="riskMessage">Paste a message or link and run the analyzer.</p></div></div>
+          <div class="alert-box" id="riskAlert">No analysis yet.</div><div class="risk-list-header"><strong>Detected Risks</strong><span class="risk-count" id="riskCount">0 found</span></div><div class="risk-list" id="riskList"><div class="empty-state">No risks detected yet.</div></div>
+        </div>
+      </section>
+
+      <section class="panel choose-panel"><div class="panel-heading simple"><div><span class="panel-icon">★</span><h2>Why Choose ScamShield?</h2></div></div><div class="feature-grid">
+        <article><span>🧠</span><h3>AI-Style Detection</h3><p>Explainable pattern analysis for a hackathon MVP.</p></article><article><span>⚡</span><h3>Real-Time Analysis</h3><p>Instant scoring with clear reasons.</p></article><article><span>🔒</span><h3>Privacy First</h3><p>Works locally in your browser.</p></article><article><span>📖</span><h3>Educational Insights</h3><p>Learn common scam red flags.</p></article>
+      </div><h3 class="support-title">Supported Input Types</h3><div class="support-row"><div><span>💬</span><b>SMS / Text</b><small>Paste suspicious SMS</small></div><div><span>✉</span><b>Emails</b><small>Paste email content</small></div><div><span>🔗</span><b>Links / URLs</b><small>Check warning signs</small></div><div><span>🖼</span><b>Images</b><small>Screenshot workflow</small></div></div></section>
+    </section>
+
+    <section id="page-analyze" class="page"><div class="page-title"><span>⌕</span><div><h1>Analyze a Message</h1><p>Choose how you want to scan suspicious content.</p></div></div><div class="panel large-form"><div class="scan-types"><button class="scan-type active" data-type="text">▤ Text</button><button class="scan-type" data-type="email">✉ Email</button><button class="scan-type" data-type="link">🔗 Link</button><button class="scan-type" data-type="image">🖼 Image</button></div><textarea id="messageInput2" maxlength="2000" placeholder="Example: URGENT! Your account is suspended. Click http://verify-now.xyz and enter your OTP."></textarea><input type="file" id="imageInput" accept="image/*" hidden><div class="image-upload hidden" id="imageUpload"><div class="upload-icon">🖼</div><h3>Upload a scam screenshot</h3><p>This MVP stores only the filename. Add OCR/API later.</p><button class="ghost" id="pickImageBtn">Choose Image</button><span id="fileName"></span></div><button class="primary full" id="analyzeBtn2">⌕ Analyze Now</button><div class="examples"><span>Try an example:</span><button data-example="sms">Suspicious SMS</button><button data-example="email">Phishing Email</button><button data-example="link">Fake Link</button><button data-example="prize">Prize Scam</button></div></div><div class="panel result-detail" id="resultDetail"><h2>Analysis Result</h2><div class="result-placeholder">Run an analysis to see the complete explanation.</div></div></section>
+
+    <section id="page-history" class="page"><div class="page-title"><span>◴</span><div><h1>Scan History</h1><p>Review scans saved in this browser.</p></div></div><div class="panel"><div class="table-tools"><input id="historySearch" placeholder="Search scans..."><select id="historyFilter"><option value="all">All</option><option value="High">High Risk</option><option value="Medium">Medium</option><option value="Low">Low</option><option value="Safe">Safe</option></select><button class="ghost" id="clearHistory">Clear</button></div><div class="table-wrap"><table><thead><tr><th>Type</th><th>Content Preview</th><th>Result</th><th>Date & Time</th><th>Action</th></tr></thead><tbody id="historyBody"></tbody></table></div></div></section>
+
+    <section id="page-tips" class="page"><div class="page-title"><span>♢</span><div><h1>Safety Tips</h1><p>Simple habits that reduce scam risk.</p></div></div><div class="tip-grid"><article class="panel"><span>✓</span><h3>Verify Senders</h3><p>Use official apps, websites or trusted numbers.</p></article><article class="panel"><span>◷</span><h3>Avoid Urgency</h3><p>Scammers pressure you to act before thinking.</p></article><article class="panel"><span>🔗</span><h3>Check Links</h3><p>Inspect domains before opening them.</p></article><article class="panel"><span>🔒</span><h3>Never Share OTPs</h3><p>Banks should never need your OTP through chat.</p></article><article class="panel"><span>⚑</span><h3>Report Scams</h3><p>Report fraudulent accounts and messages.</p></article><article class="panel"><span>🛡</span><h3>Use 2FA</h3><p>Enable two-factor authentication.</p></article></div></section>
+
+    <section id="page-tools" class="page"><div class="page-title"><span>⬡</span><div><h1>Security Tools</h1><p>Useful demo tools for safer decisions.</p></div></div><div class="tools-grid"><article class="panel tool-card"><span>🔗</span><div><h3>URL Checker</h3><p>Evaluate a URL for common phishing signals.</p><input id="urlToolInput" placeholder="https://example.com"><button class="primary" id="urlToolBtn">Check URL</button><div class="tool-output" id="urlToolOut"></div></div></article><article class="panel tool-card"><span>✉</span><div><h3>Email Header Analyzer</h3><p>Paste email header text for basic checks.</p><textarea id="headerInput" placeholder="Paste email header..."></textarea><button class="primary" id="headerBtn">Analyze Header</button><div class="tool-output" id="headerOut"></div></div></article><article class="panel tool-card"><span>🖼</span><div><h3>Image Scanner</h3><p>Prepare screenshots for OCR/AI integration.</p><button class="ghost" data-page="analyze">Open Scanner</button></div></article><article class="panel tool-card"><span>🛡</span><div><h3>OTP Safety Guide</h3><p>Never share OTP, PIN, password or CVV.</p><button class="ghost" data-page="tips">Open Guide</button></div></article></div></section>
+
+    <section id="page-reports" class="page"><div class="page-title"><span>▤</span><div><h1>Reports</h1><p>Local analytics generated from scan history.</p></div></div><div class="stats-grid reports-stats"><article><div class="stat-icon danger">☷</div><div><strong id="reportTotal">0</strong><span>Total Scans</span></div></article><article><div class="stat-icon warning">△</div><div><strong id="reportHigh">0</strong><span>High Risk</span></div></article><article><div class="stat-icon safe">✓</div><div><strong id="reportSafe">0</strong><span>Low / Safe</span></div></article><article><div class="stat-icon info">%</div><div><strong id="reportRate">0%</strong><span>Threat Rate</span></div></article></div><div class="panel"><h2>Most Common Signals</h2><div id="signalReport" class="signal-report"></div></div></section>
+
+    <section id="page-features" class="page"><div class="page-title"><span>★</span><div><h1>Features</h1><p>Everything included in this build.</p></div></div><div class="tip-grid"><article class="panel"><h3>Explainable Risk Score</h3><p>Human-readable reasons for every score.</p></article><article class="panel"><h3>Multiple Input Modes</h3><p>Text, email, link and screenshot flows.</p></article><article class="panel"><h3>Local Scan History</h3><p>Persistent demo history using LocalStorage.</p></article><article class="panel"><h3>Responsive Design</h3><p>Desktop, tablet and mobile layouts.</p></article><article class="panel"><h3>Security Tools</h3><p>URL and email-header helper tools.</p></article><article class="panel"><h3>Hackathon Ready</h3><p>Deploy directly to GitHub Pages.</p></article></div></section>
+
+    <section id="page-how" class="page"><div class="page-title"><span>→</span><div><h1>How It Works</h1><p>A simple four-step scam-detection workflow.</p></div></div><div class="steps"><div class="panel"><b>01</b><h3>Paste Content</h3><p>Add an SMS, email or link.</p></div><div class="panel"><b>02</b><h3>Analyze Signals</h3><p>Checks urgency, credentials, links and money language.</p></div><div class="panel"><b>03</b><h3>Calculate Risk</h3><p>Converts signals into a 0–100 score.</p></div><div class="panel"><b>04</b><h3>Take Safe Action</h3><p>Read the explanation and suggestions.</p></div></div></section>
+
+    <section id="page-about" class="page"><div class="page-title"><span>◇</span><div><h1>About ScamShield</h1><p>A college hackathon concept by Shaik Arfan.</p></div></div><div class="panel about-card"><h2>Mission</h2><p>ScamShield helps users recognize scam signals before clicking links, sending money or sharing sensitive information.</p><h2>Hackathon Expansion</h2><p>Connect this UI to an LLM, URL-reputation API, OCR model, Supabase/Firebase and a reporting service for a production-grade version.</p></div></section>
+
+    <footer><a class="footer-brand" href="#" data-page="home"><span class="shield-logo tiny">S</span><b>Scam<span>Shield</span></b></a><span>Detect. Prevent. Stay Safe.</span><nav><button data-page="about">About</button><button data-page="tips">Privacy</button><button data-page="about">Contact</button></nav><span>Built with ♥ for a safer internet.</span></footer>
+  </main>
+</div>
+<div class="modal" id="loginModal"><div class="modal-card"><button class="modal-close" id="closeLogin">×</button><div class="login-visual"><div class="big-shield">S</div><h2>Scam<span>Shield</span></h2><p>“A safer internet starts with an aware you.”</p></div><form id="loginForm"><h2>Create Your Account</h2><p>Join ScamShield and stay protected.</p><label>Full Name<input id="nameInput" required placeholder="Your name"></label><label>Email Address<input type="email" required placeholder="name@example.com"></label><label>Password<input type="password" required minlength="6" placeholder="••••••••"></label><button class="primary full" type="submit">Sign Up</button><small>Demo only — no credentials are sent to a server.</small></form></div></div>
+<script src="app.js"></script>
+</body></html>
