@@ -1,0 +1,8 @@
+# ScamShield environment template
+# The current browser-only demo does not require secrets.
+# Add future backend/serverless credentials here, NEVER in app.js.
+
+# AI_API_KEY=replace_me
+# URL_REPUTATION_API_KEY=replace_me
+# DATABASE_URL=replace_me
+# AUTH_PROJECT_ID=replace_me

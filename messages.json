@@ -1,0 +1,18 @@
+[
+  {
+    "type": "safe",
+    "text": "Hi Arfan, our class meeting is at 10 AM tomorrow."
+  },
+  {
+    "type": "demo_scam",
+    "text": "URGENT! Your account is blocked. Click http://verify-account.xyz and enter your OTP."
+  },
+  {
+    "type": "demo_scam",
+    "text": "CONGRATULATIONS! You won a prize. Pay a processing fee to claim it."
+  },
+  {
+    "type": "demo_scam",
+    "text": "Support team: send your password and verification code immediately."
+  }
+]

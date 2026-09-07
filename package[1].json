@@ -1,0 +1,22 @@
+{
+  "name": "scamshield",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Explainable phishing and scam detection web app for cybersecurity awareness.",
+  "scripts": {
+    "start": "npx serve .",
+    "check": "node --check app.js"
+  },
+  "keywords": [
+    "cybersecurity",
+    "phishing-detection",
+    "scam-detection",
+    "hackathon",
+    "javascript"
+  ],
+  "author": "Shaik Arfan",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
